@@ -1,4 +1,4 @@
-package com.ibm.cio.ws;
+package com.ibm.cio.model;
 
 /**
  * Abstract class that will represent the generic properties of a geometrical figure (basically name and area). The TypesOfFigure enum will define the 

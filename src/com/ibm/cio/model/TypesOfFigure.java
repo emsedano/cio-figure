@@ -1,4 +1,4 @@
-package com.ibm.cio.ws;
+package com.ibm.cio.model;
 
 /**
  * Enum that represents the available types of figures as constants. These include the circle, the square, the rectangle, and the triangle. All of them 

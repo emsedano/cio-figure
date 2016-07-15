@@ -1,4 +1,4 @@
-package com.ibm.cio.ws;
+package com.ibm.cio.model;
 
 /**
  * The Circle class represents a shape that is the set of all points in a plane that are at a given distance from a given point.
@@ -7,7 +7,7 @@ package com.ibm.cio.ws;
  * 
  */
 public class Circle extends Figure{
-	private float fRadius; //Radio del círculo
+	private float fRadius; //Radio del cï¿½rculo
 	
 	/**
 	 * Circle's constructor that builds its instance based on the given radius.
