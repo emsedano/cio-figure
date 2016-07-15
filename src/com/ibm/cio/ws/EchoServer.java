@@ -7,6 +7,9 @@ import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
+
+import com.ibm.cio.model.Paint;
+import com.ibm.cio.ws.helper.JSONParser;
  
 /** 
  * @ServerEndpoint gives the relative name for the end point
@@ -41,7 +44,19 @@ public class EchoServer {
     public void onMessage(String message, Session session){
         System.out.println("Message from " + session.getId() + ": " + message);
         try {
-            session.getBasicRemote().sendText(message);
+        	
+        	if(message.equalsIgnoreCase("doArtist")){
+
+        		Paint paint = new Paint(); //TODO Factory.getInstance().drawPicture(); //or something similar
+        		String responseMessage = JSONParser.createJson(paint);
+        		
+        		session.getBasicRemote().sendText(responseMessage);
+        		
+        	}else{
+        		session.getBasicRemote().sendText(message);
+        	}
+        	
+            
         } catch (IOException ex) {
             ex.printStackTrace();
         }

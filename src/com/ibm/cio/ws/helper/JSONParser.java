@@ -7,6 +7,8 @@ import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
 import javax.json.JsonReader;
 
+import com.ibm.cio.model.Paint;
+
 
 /**
  * Helper class to convert JSON string to JSON object and 
@@ -18,8 +20,8 @@ public class JSONParser {
 	/**
 	 * parse json message into Paint object
 	 * */
-	public static Object parseJsonMsg(String message){
-		
+	public static Paint parseJsonMsg(String message){
+		Paint paint = new Paint();
 		JsonReader reader = Json.createReader(new StringReader(message));
 		
 		JsonObject json = reader.readObject();
@@ -28,14 +30,14 @@ public class JSONParser {
 		
 		reader.close();
 		
-		return json;
+		return paint;
 	}
 	
 	
 	/**
 	 * Builds json message from Paint class
 	 * */
-	public static String createJson(Object obj){
+	public static String createJson(Paint paint){
 		
 		String response = "";
 		
