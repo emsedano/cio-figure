@@ -29,6 +29,14 @@ public class Square extends Figure {
 		setFigureType(TypesOfFigure.square);
 	}
 	
+	
+	public Square(float fSide, String color, int x, int y){
+		this.fSide=fSide;
+		setFigureType(TypesOfFigure.square);
+		setColor(color);
+		setLocation(x, y);
+	}
+	
 	/**
 	 * Inherited function that calculates the area of the square using the length of one of its sides. The area of a square is fSide^2, or fSide*fSide.
 	 * @return float fArea

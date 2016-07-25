@@ -28,6 +28,13 @@ public class Circle extends Figure{
 		this.fRadius = fRadius;
 		this.setFigureType(TypesOfFigure.circle);
 	}
+	
+	public Circle(float fRadius, String color, int x, int y){
+		this.fRadius = fRadius;
+		setFigureType(TypesOfFigure.circle);
+		setColor(color);
+		setLocation(x, y);
+	}
 
 	/**
 	 * Inherited function that calculates the area of the circle using its radius. 

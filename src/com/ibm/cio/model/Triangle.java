@@ -56,6 +56,15 @@ public class Triangle extends Figure {
 		this.fBase = fBase;
 		setFigureType(TypesOfFigure.triangle);
 	}
+	
+	
+	public Triangle(float fBase, float fHeight, String color, int x, int y){
+		this.fBase = fBase;
+		this.fHeight = fHeight;
+		setFigureType(TypesOfFigure.triangle);
+		setColor(color);
+		setLocation(x, y);
+	}
 
 	/**
 	 * Inherited function that calculates the area of the triangle using its base and height. 

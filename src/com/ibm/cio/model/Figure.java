@@ -15,6 +15,10 @@ public abstract class Figure {
 	//valor del area de la figura del modificador de acceso PROTECTED le permite a las clases heredar a una sola.
 	protected float fArea=-1;
 	
+	private String color;
+	private int x;
+	private int y;
+	
 	/**
 	 * Function that specifies which kind of figure is the instance executing it. (See TypesOfFigure enum for additional details).
 	 * @return TypesOfFigure eFigureType
@@ -56,6 +60,27 @@ public abstract class Figure {
 	 */
 	public String getName() {
 		return this.sName;
+	}
+	
+	public void setLocation(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public void setColor(String color){
+		this.color = color;
+	}
+	
+	public String getColor(){
+		return color;
+	}
+	
+	public int getX() {
+		return x;
+	}
+	
+	public int getY() {
+		return y;
 	}
 	
 	//getArea - getter abstracto

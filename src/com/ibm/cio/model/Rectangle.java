@@ -47,6 +47,14 @@ public class Rectangle extends Figure {
 		setFigureType(TypesOfFigure.rectangle);
 	}
 	
+	public Rectangle(float fBase, float fHeight, String color, int x, int y){
+		this.fBase = fBase;
+		this.fHeight = fHeight;
+		setFigureType(TypesOfFigure.rectangle);
+		setColor(color);
+		setLocation(x, y);
+	}
+	
 	/**
 	 * Rectangle constructor that builds its instance based on given height and base, plus the rectangle's name.
 	 * @param String sName

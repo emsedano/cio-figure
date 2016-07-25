@@ -3,7 +3,7 @@ package com.ibm.cio.ws.helper;
 import java.util.ArrayList;
 import java.util.Random;
 
-import com.ibm.cio.model.Figure;
+import com.ibm.cio.model.*;
 
 public class Factory {
 	
